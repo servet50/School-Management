@@ -128,7 +128,7 @@ public class Lesson extends JFrame {
 	
 	private Student getStudentInfo(Student student) {
 		//Student student = new Student();
-		//sql cagÄ±rma user bilgileri getirme
+		//sql cagÃ„Â±rma user bilgileri getirme
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login","root","");
@@ -140,7 +140,7 @@ public class Lesson extends JFrame {
 				student.setStudent_ID(rs.getString(1));                                                                                                                   
 				
 		
-				student.setFirst_Lesson(rs.getString(2)); //Bu kod AddingLessonda seçtiðimiz dersleri textFieldlere getiriyor.. 
+				student.setFirst_Lesson(rs.getString(2)); . 
 				student.setSecond_Lesson(rs.getString(3));
 				student.setThird_Lesson(rs.getString(4));	
 				student.setFourth_Lesson(rs.getString(5));
@@ -518,7 +518,7 @@ public class Lesson extends JFrame {
 			};
 	
 		String[] columnNames = {"Student ID","Computer Networks","Software Development","Java Programming","Operating Systems","Virtualization Technologies","Biometric System","Intership"};
-		DefaultTableModel model = new DefaultTableModel(data,columnNames); //AÞAÐDAKÝ TABLOYA GEÇECEK DERSLER 
+		DefaultTableModel model = new DefaultTableModel(data,columnNames); 
 		table = new JTable(model); 
 
 		JScrollPane scrollPane = new JScrollPane(table);
@@ -537,7 +537,7 @@ public class Lesson extends JFrame {
 					PreparedStatement ps=conn.prepareStatement("insert into lesson(student_id,computer,software,java,operating,virtu,biometric,intership) values (?,?,?,?,?,?,?,?);");
 					ps.setString(1, studentTxt.getText());
 					ps.setString(2, computerTxt.getText());
-					ps.setString(3, softwareTxt.getText()); //GÝRDÝÐÝMÝZ SONUCLARI DATABASE EKLÝYOR 
+					ps.setString(3, softwareTxt.getText()); 
 					ps.setString(4, javaTxt.getText());
 					ps.setString(5, operatingTxt.getText());
 					ps.setString(6, virtuTxt.getText());
@@ -586,7 +586,7 @@ public class Lesson extends JFrame {
 				R[15] = (R[0] + R[1] + R[2]+ R[3] + R[4]+ R[5] + R[6] +  R[7] + R[8] + R[9]+ R[10] + R[11]+ R[12] + R[13]);
 				
 				R[16] =( R[0]* 0.4 + R[7]  *0.6);
-				R[17] =( R[1]* 0.4 + R[8]  *0.6); // BURDAKÝ KODLAR ÝSE VÝZE ÝLE FÝNAL ORTALAMASINI HESAPLAYIP RESULT kýsmýnda gösteriyor
+				R[17] =( R[1]* 0.4 + R[8]  *0.6); 
 				R[18] =( R[2]* 0.4 + R[9]  *0.6);
 				R[19] =( R[3]* 0.4 + R[10]  *0.6);
 				R[20] =( R[4]* 0.4 + R[11]  *0.6);
@@ -595,7 +595,7 @@ public class Lesson extends JFrame {
 				
 				
 				
-				String Average = String.format("%.0f", R[14]); // NOT ORTALAMASINI EKRANA YAZDIRIYOR R14(585) 
+				String Average = String.format("%.0f", R[14]); //
 				averageTxt.setText(Average);
 				
 				
@@ -627,7 +627,7 @@ public class Lesson extends JFrame {
 					rat3.setText("1st");
 				}
 				else if(R[8]>=600) {
-					rat3.setText("2i"); // NOT TOPLAMININ HANGÝ DEÐERLER ARASINDA OLDUÐUNU GÖSTERÝYOR
+					rat3.setText("2i"); // NOT TOPLAMININ HANGÃ DEÃERLER ARASINDA OLDUÃUNU GÃ–STERÃYOR
 				}
 				else if(R[8]>=500) {
 					rat3.setText("2ii");
@@ -648,7 +648,7 @@ public class Lesson extends JFrame {
 				 DefaultTableModel model =(DefaultTableModel) table.getModel();
 				 model.addRow(new Object[] {
 						 studentTxt.getText(),
-						 computer2Txt.getText(), //RESULT SONUCLARI ALTTAKÝ TABLOYA YAZDIRIYOR
+						 computer2Txt.getText(), 
 				
 						 software2Txt.getText(),
 						 java2Txt.getText(),
