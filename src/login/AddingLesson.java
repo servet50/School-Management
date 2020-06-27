@@ -153,7 +153,7 @@ public class AddingLesson extends JFrame {
 					
 					ps.setString(1, studentId.getText());
 					ps.setString(2, comboComputer.getSelectedItem().toString());
-					ps.setString(3, comboSoftware.getSelectedItem().toString()); // BURDA COMBOBOX ta seçtiðimiz dersleri database veri aktarýyor..
+					ps.setString(3, comboSoftware.getSelectedItem().toString()); 
 					ps.setString(4, comboJava.getSelectedItem().toString());
 					ps.setString(5, comboOperating.getSelectedItem().toString());
 					ps.setString(6, comboVirtu.getSelectedItem().toString());
@@ -174,7 +174,7 @@ public class AddingLesson extends JFrame {
 					System.out.println(e1);
 					
 				}
-				DefaultTableModel model = (DefaultTableModel)table1.getModel(); // SECTÝÐÝMÝZ DERSLERÝ TABLOYA YAZDIRIYOR YANDAKÝ TABLOYA
+				DefaultTableModel model = (DefaultTableModel)table1.getModel(); 
 				model.addRow(new Object[] {studentId.getText(),
 						comboComputer.getSelectedItem(),comboSoftware.getSelectedItem(),comboJava.getSelectedItem(),
 						comboOperating.getSelectedItem(),comboVirtu.getSelectedItem(),comboBiometric.getSelectedItem(),comboIntership.getSelectedItem()});
