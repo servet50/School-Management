@@ -164,11 +164,11 @@ public class StudentList extends JFrame {
 						Statement stmt =con.createStatement();
 						String sql=("Select student_id,First_Lesson,Second_Lesson,Third_Lesson,Fourth_Lesson,Fifth_Lesson,Sixth_Lesson,Seventh_Lesson from addingLesson where student_id="+studentlist.get(row).getUser_id());
 		
-						ResultSet rs= stmt.executeQuery(sql);// TIKLADIÐIMIZ ID ÖÐRENCÝNÝN SEÇTÝÐNÝ DERSLERÝ GETÝRÝYOR 
+						ResultSet rs= stmt.executeQuery(sql);
 						if(rs.next()) {
 							int userId = rs.getInt(1);
 							//Student student = new Student();
-							Student student = getStudentInfo(userId);//ÖÐRENCÝ BÝLGÝLERÝNÝ DOLDURUYOR 
+							Student student = getStudentInfo(userId);
 							Lesson menu = new Lesson(student);
 							menu.lessonScreen(student);
 						}
