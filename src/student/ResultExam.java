@@ -82,7 +82,7 @@ public class ResultExam extends JFrame {
 	}
 	private Grade getGradeInfo(Student student) {
 		//Student student = new Student();
-		//sql cagÄ±rma user bilgileri getirme+
+		//sql cagÃ„Â±rma user bilgileri getirme+
 		Grade grade = new Grade();
 		try {
 			
@@ -96,7 +96,7 @@ public class ResultExam extends JFrame {
 				student.setStudent_ID(rs.getString(1));                                                                                                                   
 			
 				grade.setLesson1(rs.getString(2));
-				grade.setLesson2(rs.getString(3)); //ÖÐRENCÝNNÝN ADDÝÝNGLESSON CLASSINDA SECTÝÐÝ DERSLERÝ  DATABASE ÝLE TEXTFÝELDLERE YAZDIRIYORUZ
+				grade.setLesson2(rs.getString(3)); 
 				grade.setLesson3(rs.getString(4));	
 				grade.setLesson4(rs.getString(5));
 				grade.setLesson5(rs.getString(6));
@@ -116,7 +116,7 @@ public class ResultExam extends JFrame {
 	}
 	private StudentResult getStudentResultInfo(Student student) {
 		//Student student = new Student();
-		//sql cagÄ±rma user bilgileri getirme
+		//sql cagÃ„Â±rma user bilgileri getirme
 		StudentResult studentresult1 = new StudentResult();
 		try {
 			
@@ -130,7 +130,7 @@ public class ResultExam extends JFrame {
 				//studentresult.setStudent_ID(rs.getInt(1));
 				
 				studentresult1.setResult1(rs.getInt(2));
-				studentresult1.setResult2(rs.getInt(3)); // ÖÐRETMENIN ÖNCEDEN GÝRDÝÐÝ BÝLGÝLERÝ DATABASEDEN VERÝ GETÝRÝP EKRANA YAZDIRIYORUZ
+				studentresult1.setResult2(rs.getInt(3)); 
 				studentresult1.setResult3(rs.getInt(4));
 				studentresult1.setResult4(rs.getInt(5));
 				studentresult1.setResult5(rs.getInt(6));
