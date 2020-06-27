@@ -82,10 +82,10 @@ public class LoginStudent extends JFrame {
 	
 	private Student getStudentInfo(int userId) {
 		Student student = new Student();
-		//sql cagÄ±rma user bilgileri getirme
+		//sql cagÃ„Â±rma user bilgileri getirme
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login","root",""); // user id name surname bilgilerini getiriyor ve tutuyor 
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login","root","");  
 			Statement stmt =con.createStatement();
 			String sql="Select user_id,name,surname from users where user_id="+userId+ "";
 			ResultSet rs= stmt.executeQuery(sql);
@@ -134,8 +134,8 @@ public class LoginStudent extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login","root",""); //Burda ise önceden kayýt yaptýrdýðýmýz kullanýcýlarý sorgulatýyor
-					// Name ve password doðru ise bizi Menu classýna yolluyor 
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login","root",""); 
+					
 					Statement stmt =con.createStatement();
 					String sql="Select user_id from dblogin where name='"+text1.getText()+ "' and password='"+String.valueOf(pass1.getPassword())+"'";
 					ResultSet rs= stmt.executeQuery(sql);
