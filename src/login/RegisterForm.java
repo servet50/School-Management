@@ -190,7 +190,7 @@ public class RegisterForm extends JFrame {
 					ps.setString(2, name1.getText());
 					ps.setString(3, surname1.getText());
 					ps.setString(4, pass2.getText());
-					ps.setString(5, date1.getText());   // GÝRDÝÐÝMÝZ BÝLGÝLERÝ DATABASE YÜKLÜYOR
+					ps.setString(5, date1.getText());   
 					ps.setString(6, phone1.getText());
 					ps.setString(7, faculty1.getText());
 					ps.setString(8, depart1.getText());
@@ -251,7 +251,7 @@ public class RegisterForm extends JFrame {
 			ps.setString(1, userName);
 			
 			ps.setString(2, password); 
-			ps.setString(3, user_id);  // BU KODLAR ÝSE ID NAME SURNAME bilgileriniii dblogin database ekliyor
+			ps.setString(3, user_id); 
 			
 			int x = ps.executeUpdate();
 			if(x > 0) {
