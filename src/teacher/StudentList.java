@@ -63,7 +63,7 @@ public class StudentList extends JFrame {
 
 	private Student getStudentInfo(int userId) {
 		Student student = new Student();
-		// sql cagƒ±rma user bilgileri getirme
+		// sql cag√Ñ¬±rma user bilgileri getirme
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login", "root", "");
@@ -91,10 +91,10 @@ public class StudentList extends JFrame {
 	private ArrayList<Student> getStudentList() {
 
 		ArrayList<Student> studentlist = new ArrayList<Student>();
-		// sql cagƒ±rma user bilgileri getirme
+		// sql cag√Ñ¬±rma user bilgileri getirme
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login", "root", "");// ARRAY L›ST OLUﬁTURDUM users Tablosunda bulunan userid name surname getiriyor
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login", "root", "");
 			Statement stmt = con.createStatement();
 			String sql = "Select user_id,name,surname from users";
 
@@ -164,11 +164,11 @@ public class StudentList extends JFrame {
 						Statement stmt =con.createStatement();
 						String sql=("Select student_id,First_Lesson,Second_Lesson,Third_Lesson,Fourth_Lesson,Fifth_Lesson,Sixth_Lesson,Seventh_Lesson from addingLesson where student_id="+studentlist.get(row).getUser_id());
 		
-						ResultSet rs= stmt.executeQuery(sql);// TIKLADI–IMIZ ID ÷–RENC›N›N SE«T›–N› DERSLER› GET›R›YOR 
+						ResultSet rs= stmt.executeQuery(sql);// TIKLADI√êIMIZ ID √ñ√êRENC√ùN√ùN SE√áT√ù√êN√ù DERSLER√ù GET√ùR√ùYOR 
 						if(rs.next()) {
 							int userId = rs.getInt(1);
 							//Student student = new Student();
-							Student student = getStudentInfo(userId);//÷–RENC› B›LG›LER›N› DOLDURUYOR 
+							Student student = getStudentInfo(userId);//√ñ√êRENC√ù B√ùLG√ùLER√ùN√ù DOLDURUYOR 
 							Lesson menu = new Lesson(student);
 							menu.lessonScreen(student);
 						}
