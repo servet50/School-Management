@@ -627,7 +627,7 @@ public class Lesson extends JFrame {
 					rat3.setText("1st");
 				}
 				else if(R[8]>=600) {
-					rat3.setText("2i"); // NOT TOPLAMININ HANGÝ DEÐERLER ARASINDA OLDUÐUNU GÖSTERÝYOR
+					rat3.setText("2i");
 				}
 				else if(R[8]>=500) {
 					rat3.setText("2ii");
